@@ -44,7 +44,7 @@ def create_tabs(): # создает таблицы
                              date date);'''))
     except psy.Error as err:
         if err.pgcode == psy.errorcodes.DUPLICATE_TABLE:
-            return f'relations (tables) already exists'
+            return 'relations (tables) already exists'
         else:
             print(f'{err.pgerror}\nCode error: {err.pgcode}. '
                   f'See on http://initd.org/psycopg/docs/errors.html')
